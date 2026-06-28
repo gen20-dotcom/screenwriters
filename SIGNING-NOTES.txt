@@ -1,0 +1,12 @@
+CODE SIGNING NOTES
+
+A normal Windows app installer should show a verified publisher.
+For that, the EXE must be signed.
+
+Common options:
+- Microsoft Trusted Signing
+- DigiCert / Sectigo / GlobalSign code-signing certificate
+- Microsoft Store distribution
+
+If you do not sign the installer, Windows SmartScreen or browser antivirus may block it.
+Do not tell users to disable antivirus.

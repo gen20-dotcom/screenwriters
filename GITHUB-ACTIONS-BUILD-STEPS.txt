@@ -1,0 +1,52 @@
+SCREENWRITER - BUILD REAL NO-EDGE WINDOWS EXE USING GITHUB ACTIONS
+
+This package builds a real Electron Windows installer on GitHub's Windows machine.
+It does NOT use Microsoft Edge app mode.
+End users do NOT need Node.js.
+
+STEPS:
+
+1. Create a new GitHub repository.
+   Example name: screenwriter-desktop
+
+2. Upload all files from this folder to that repository.
+   Important: upload package.json, package-lock.json, main.js, preload.js, app folder, and .github folder.
+
+3. Open your GitHub repository.
+
+4. Go to:
+   Actions → Build Windows Installer → Run workflow
+
+5. Wait until the build completes.
+
+6. Open the finished workflow run.
+
+7. Download artifact:
+   Screenwriter-Windows-Build
+
+8. Extract the downloaded artifact.
+
+9. Inside it, you will get:
+   Screenwriter Setup 1.0.0.exe
+   Screenwriter 1.0.0.exe  (portable, if generated)
+
+10. Use Screenwriter Setup 1.0.0.exe to install like normal Windows software.
+
+NOTE ABOUT WARNINGS:
+This builds a real Electron app, not Edge.
+But the installer is still unsigned unless you add code signing.
+For private testing, it may run fine.
+For public release, buy/use a Windows code-signing certificate.
+
+WHAT THIS APP INCLUDES:
+- Home screen
+- Blank screenplay
+- Import .swscript / .txt / .fountain
+- Recent documents
+- Scene sidebar
+- Drag scenes to reorder
+- Smart slugline suggestions
+- Character autocomplete
+- Transition suggestions
+- Save PDF
+- Export Screenwriter File (.swscript)

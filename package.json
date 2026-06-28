@@ -1,0 +1,52 @@
+{
+  "name": "screenwriter-desktop",
+  "version": "1.0.0",
+  "description": "A clean screenplay editor desktop app for Windows.",
+  "main": "main.js",
+  "author": "Screenwriter",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win nsis",
+    "dist-portable": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.screenwriter.desktop",
+    "productName": "Screenwriter",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "app/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Screenwriter"
+    },
+    "fileAssociations": [
+      {
+        "ext": "swscript",
+        "name": "Screenwriter Script",
+        "description": "Screenwriter editable script file",
+        "role": "Editor"
+      }
+    ]
+  }
+}
